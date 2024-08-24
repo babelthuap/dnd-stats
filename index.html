@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DND Stats</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: monospace;
+    }
+
+    #dice {
+      font-family: monospace;
+      position: relative;
+      z-index: 10;
+    }
+
+    #graph>div {
+      display: flex;
+      white-space: pre;
+    }
+
+    #graph>div>div {
+      border: 1px solid red;
+      background-color: red;
+      cursor: default;
+      color: rgba(0, 0, 0, 0);
+      font-size: smaller;
+    }
+
+    #graph>div>div:hover {
+      border: 1px solid white;
+      color: unset;
+    }
+  </style>
+</head>
+
+<body>
+  Dice: <input type="text" id="dice" value="6,6,6">
+  <div id="highlight">&nbsp;</div>
+  <div id="graph"></div>
+  <script src="stats.js"></script>
+</body>
+
+</html>
